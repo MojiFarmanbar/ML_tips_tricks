@@ -26,16 +26,14 @@ def htb(data):
         """
         # Add mean to results
         data_length = float(len(data))
-        data_mean = sum(data) / data_length
+        data_mean = np.mean(data)
         results.append(data_mean)
-
         # Recursive call to get next break point
-        head = [datum for datum in data if datum > data_mean]
-        while len(head) > 1 and len(head) / data_length < 0.40:
+        head = [x for x in data if x > data_mean]
+        while len(head) > 1 and len(head) < data_length * 0.40:
             return htb_inner(head)
 
     htb_inner(data)
-
     return results
 
 def head_tail_break_encode(dataframe: pd.DataFrame, col_names: list):

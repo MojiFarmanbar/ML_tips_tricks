@@ -8,6 +8,14 @@ Here is some examples of these distributions:
 - Pareto distribution: $$ Pr(x) = \alpha C^{\alpha}x^{-\alpha-1} $$
 - Rank size function: $$y = C rank(x)^{- \alpha}$$
 - Lognormal distribution
+- Weibull
+Log-Cauchy, also known as super-heavy tail distribution (Falk, Huesler, and Reiss (2011), p. 80, Fraga Alves, Haan, and Neves (2009))
+
+Non heavy-tailed distributions
+
+- Normal (non heavy-tailed)
+- Truncated Normal (left-tailed)
+- Uniform distribution
 
 For example, a country’s population is often distributed in such a heavy-tailed manner, with a minority of people (e.g., 20 percent) in the countryside and the vast majority (e.g., 80 percent) in urban areas.
 
@@ -17,3 +25,10 @@ head/tail-breaks partitions all of the data values around the mean into two part
 
 ![](./img/head_tail_breaks.png "")
 please check [this paper](https://arxiv.org/ftp/arxiv/papers/1209/1209.2801.pdf) for more detail.
+
+A naive approach is added, however, one can use this api
+```python
+!pip install pysal
+import mapclassify as mc
+htb = mc.HeadTailBreaks(X)
+```
