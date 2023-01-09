@@ -36,3 +36,6 @@ Example:
 - Assumoe purpose is independent from src and dst
 - Estimate $$Pr(Happy|Paris,Tokyo)$$ as
 $$Pr(Happy|Paris, Tokyo, work)Pr(work)\newline+Pr(Happy|Paris, Tokyo, Vacation)Pr(Vacation)$$
+
+### Acknowledgement
+Thanks to Lucas Bernardi
